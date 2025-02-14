@@ -4,7 +4,6 @@
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
 # Developer Adds
-mailtrap-connector-dotnet.sln
 
 # User-specific files
 *.rsuser
@@ -365,3 +364,4 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 /MailTrapServiceTester/MailTrapServiceTester.csproj
+/mailtrap-connector-dotnet.sln

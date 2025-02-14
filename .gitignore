@@ -365,3 +365,5 @@ MigrationBackup/
 FodyWeavers.xsd
 
 /mailtrap-connector-dotnet.sln
+
+MailTrapServiceTester/

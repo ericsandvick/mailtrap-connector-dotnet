@@ -31,9 +31,27 @@ MailTrapMessage mailTrapMessage = new MailTrapMessage
   {
       new MailTrapToEmail("you@yourdomain.com")
   },
+  CcEmails = new List<MailTrapToEmail>
+  {
+      new MailTrapToEmail("cc@yourdomain.com")
+  },
+  BccEmails = new List<MailTrapToEmail>
+  {
+      new MailTrapToEmail("bcc@yourdomain.com")
+  },
   Subject = "You are awesome!",
   Text = "Congrats for sending test email with Mailtrap!",
-  Category = "Integration Test"
+  Category = "Integration Test",
+  Attachments = new List<MailTrapAttachment>
+  {
+      new MailTrapAttachment
+      {
+          Content = "aGVsbG8gYXR0YWNobWVudCE=",  // Base64 string of the file content
+          Disposition = "attachment",
+          FileName = "attachment1.txt",
+          Type = "text/plain"
+      }
+   }
 };
 
 // Send the message and retrive the response
@@ -51,6 +69,14 @@ MailTrapTemplateMessage mailTrapTemplateMessage = new MailTrapTemplateMessage
   {
     new MailTrapToEmail("you@yourdomain.com")
   },
+  CcEmails = new List<MailTrapToEmail>
+  {
+      new MailTrapToEmail("cc@yourdomain.com")
+  },
+  BccEmails = new List<MailTrapToEmail>
+  {
+      new MailTrapToEmail("bcc@yourdomain.com")
+  },
   TemplateUuid = "30dfc268-321c-4d64-9264-c9d506299f77",
 
   // This is an object that you'll need to implement based on the variables defined in your template.
@@ -63,6 +89,16 @@ MailTrapTemplateMessage mailTrapTemplateMessage = new MailTrapTemplateMessage
       "C#",
       "Java",
       "Html"
+    },
+    Attachments = new List<MailTrapAttachment>
+    {
+      new MailTrapAttachment
+      {
+          Content = "aGVsbG8gYXR0YWNobWVudCE=",  // Base64 string of the file content
+          Disposition = "attachment",
+          FileName = "attachment1.txt",
+          Type = "text/plain"
+      }
     }
   }
 };
